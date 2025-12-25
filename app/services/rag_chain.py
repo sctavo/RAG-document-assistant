@@ -52,8 +52,8 @@ def get_answer(question: str):
     )
     
     # Convertir la BD en un "Retriever" (Buscador)
-    # k=3 significa "traeme los 3 fragmentos más relevantes"
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+    # k=2 significa "traeme los 2 fragmentos más relevantes"
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
     
     # Definir la cadena (Chain) de procesamiento
     rag_chain = (

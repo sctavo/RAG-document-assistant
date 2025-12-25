@@ -19,8 +19,8 @@ def process_and_store_pdf(file_path: str):
         # Chunk size 1000: Tamaño del fragmento
         # Overlap 200: Solapamiento para no perder contexto entre cortes
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000, 
-            chunk_overlap=200
+            chunk_size=500, 
+            chunk_overlap=50
         )
         splits = text_splitter.split_documents(docs)
         
