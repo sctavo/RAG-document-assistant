@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import upload # Importar el router
+from app.routers import upload, chat
 
 # 1. Iniciar la aplicación con metadatos
 # Estos datos aparecerán en la documentación automática (/docs)
@@ -36,5 +36,6 @@ async def root():
 # Aquí se conecta la lógica de chat y upload cuando se escriba.
 # De momento queda comentado para que no de error.
 from app.routers import chat, upload
-#app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
+
+app.include_router(chat.router, prefix="/api/chat", tags=["Chat"]) 
 app.include_router(upload.router, prefix="/api/upload", tags=["Upload"])
