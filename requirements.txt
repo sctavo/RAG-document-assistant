@@ -1,0 +1,18 @@
+# Backend API
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+python-multipart  # Necesario para subir archivos (PDFs)
+
+# LangChain & AI
+langchain>=0.1.0
+langchain-community
+langchain-openai
+langchain-chroma  # Conector específico para ChromaDB
+
+# Procesamiento de Documentos
+pypdf             # Para leer los PDFs
+tiktoken          # Para contar tokens (necesario para OpenAI)
+
+# Variables de entorno
+pydantic-settings
+python-dotenv
