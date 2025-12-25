@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables (CRÍTICO: Nunca subas tus API KEYS)
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# Database (Local volumes)
+chroma_db/
+data/
+
+# Docker
+docker-compose.override.yml
