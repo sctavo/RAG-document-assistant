@@ -16,3 +16,6 @@ tiktoken          # Para contar tokens (necesario para OpenAI)
 # Variables de entorno
 pydantic-settings
 python-dotenv
+
+#Adicionales
+langchain-ollama
