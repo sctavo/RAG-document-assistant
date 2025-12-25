@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# 1. Inicializamos la aplicación con metadatos
+# 1. Iniciar la aplicación con metadatos
 # Estos datos aparecerán en la documentación automática (/docs)
 app = FastAPI(
     title="Neural Doc Search API",
@@ -10,9 +10,9 @@ app = FastAPI(
 )
 
 # 2. Configuración de CORS (Cross-Origin Resource Sharing)
-# Esto es VITAL. Permite que tu frontend (Streamlit/React) que corre en un puerto
+# permite que el frontend (Streamlit/React) que corre en un puerto
 # pueda comunicarse con este backend que corre en otro.
-# En producción, 'allow_origins' debería ser la URL específica de tu frontend, no "*".
+# En producción, 'allow_origins' debería ser la URL específica de frontend, no "*".
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Permite peticiones desde cualquier origen (ok para desarrollo)
@@ -32,8 +32,8 @@ async def root():
     }
 
 # 4. Futura Integración de Routers
-# Aquí conectaremos la lógica de chat y upload cuando la escribamos.
-# De momento lo dejo comentado para que no de error.
+# Aquí se conecta la lógica de chat y upload cuando se escriba.
+# De momento queda comentado para que no de error.
 # from app.routers import chat, upload
 # app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 # app.include_router(upload.router, prefix="/api/upload", tags=["Upload"])
