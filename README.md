@@ -1,4 +1,4 @@
-# 🧠 NeuralDoc: Local RAG System
+# Local RAG System
 
 > **Asistente inteligente de documentación técnica que respeta tu privacidad.**
 > *Ejecutado 100% localmente con LLMs Open Source (TinyLlama/Phi-3).*
